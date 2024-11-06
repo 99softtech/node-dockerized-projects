@@ -27,6 +27,8 @@ Go to the directory where your war file is placed and run the following command:
 java -jar jenkins.war
 To stop
 Ctrl + C
+link>>>>>>
+https://stackoverflow.com/questions/14869311/start-stop-and-restart-jenkins-service-on-windows
 
 github>>>>>>>>>>>>>>
 email: 99softtech@gmail.com
