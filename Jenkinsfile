@@ -29,7 +29,7 @@ pipeline {
     stage('Build Image') {
       steps {
         // Run Docker build using PsExec to avoid password prompt
-        bat 'docker build -t my-node-app:1.0 .'
+        bat 'C:\Program Files\Docker\Docker\resources\bin -u 99softtech -p "Aw3#se4$dr" "docker build -t my-node-app:1.0 ."'
       }
     }
   }
