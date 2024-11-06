@@ -8,7 +8,7 @@ pipeline {
     }        
     stage('Install dependencies') {
       steps {
-        sh 'npm i -save express'
+        sh 'sudo apt npm install'
       }
     }     
     stage('Test') {
