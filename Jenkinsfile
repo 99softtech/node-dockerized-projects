@@ -1,12 +1,9 @@
 pipeline {
   agent any
-
-  tools {nodejs "node"}
-
   stages {    
-    stage('Cloning Git') {
+    stage('checkout') {
       steps {
-        git 'https://github.com/99softtech/node-dockerized-projects.git'
+        checkout scm
       }
     }        
     stage('Install dependencies') {
@@ -16,8 +13,13 @@ pipeline {
     }     
     stage('Test') {
       steps {
-         sh 'node index.js'
+        sh 'npm test'
       }
     }             
-  }
+    stage('Build') {
+      steps {
+        sh 'npm run build'
+      }
+    } 
+  
 }
