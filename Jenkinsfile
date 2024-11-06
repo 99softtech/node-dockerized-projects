@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Build Image') {
       steps {
-        bat 'runas /user:Administrator "docker build -t my-node-app:1.0 ."'
+        bat 'docker build -t my-node-app:1.0 .'
       }
     }
   }
