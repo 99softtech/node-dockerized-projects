@@ -26,5 +26,11 @@ pipeline {
         bat 'docker --version'  // Ensure Docker is accessible in the Jenkins environment
       }
     }
+    stage('Build Image') {
+      steps {
+        // Run Docker build using PsExec to avoid password prompt
+        bat 'psexec -u 99softtech -p Aw3#se4$dr "docker build -t my-node-app:1.0 ."'
+      }
+    }
   }
 }
