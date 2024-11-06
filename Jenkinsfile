@@ -21,9 +21,9 @@ pipeline {
         bat 'npm run build'
       }
     }
-    stage('Build Image') {
+    stage('Check Docker') {
       steps {
-        bat 'docker build -t my-node-app:1.0 .'
+        bat 'docker --version'  // Ensure Docker is accessible in the Jenkins environment
       }
     }
   }
