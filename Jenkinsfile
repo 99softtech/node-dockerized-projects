@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Build Image') {
       steps {
-        bat 'docker build -t my-node-app:1.0 .'
+        bat 'sudo docker build -t my-node-app:1.0 .'
       }
     }
   }
