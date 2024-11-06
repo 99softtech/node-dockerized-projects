@@ -20,6 +20,14 @@ password: Aw3#se4$dr
 Username:99softtech
 FullName99softtech
 
+start jenkins>>>>>>>>>>>>>>>>>>>>>
+To start Jenkins from command line
+Open command prompt
+Go to the directory where your war file is placed and run the following command:  //C:\Users\sunder.sharma\Downloads>java -jar jenkins.war
+java -jar jenkins.war
+To stop
+Ctrl + C
+
 github>>>>>>>>>>>>>>
 email: 99softtech@gmail.com
 password: Aw3#se4$dr
