@@ -8,17 +8,17 @@ pipeline {
     }        
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
       }
     }     
     stage('Test') {
       steps {
-        sh 'npm test'
+        bat 'npm test'
       }
     }             
     stage('Build') {
       steps {
-        sh 'npm run build'
+        bat 'npm run build'
       }
     }  
   }
