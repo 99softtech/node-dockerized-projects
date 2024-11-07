@@ -10,7 +10,7 @@ pipeline {
       steps {
        sh '''
         export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
-        echo 'Kalpana$2023' | sudo -S brew install npm
+        brew install npm
         '''
       }
     }     
