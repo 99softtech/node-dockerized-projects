@@ -29,7 +29,9 @@ pipeline {
         '''
         
         // Install project dependencies
-        sh 'npm install'
+       sh '''
+        echo 'Kalpana\\$2023' | sudo -S apt install npm
+        '''
       }
     }     
     stage('Test') {
