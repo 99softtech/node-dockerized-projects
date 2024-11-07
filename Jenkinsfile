@@ -8,7 +8,7 @@ pipeline {
     }        
     stage('Install dependencies') {
       steps {
-        sh 'sudo apt npm install'
+        sh "echo 'Aw3#se4$dr' | sudo -S apt install npm"
       }
     }     
     stage('Test') {
