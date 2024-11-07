@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+        PATH = "/usr/local/bin:$PATH"  // Adjust based on where Docker is installed
+  }
   stages {    
     stage('checkout') {
       steps {
