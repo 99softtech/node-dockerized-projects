@@ -25,7 +25,10 @@ pipeline {
     }             
     stage('Build') {
       steps {
-        sh 'npm run build'
+        sh '''
+         export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+         npm run build
+         '''
       }
     }
     stage('Check Docker') {
