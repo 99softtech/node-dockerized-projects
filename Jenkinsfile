@@ -8,29 +8,29 @@ pipeline {
     }        
     stage('Install dependencies') {
       steps {
-        bat 'npm install'
+        sh 'npm install'
       }
     }     
     stage('Test') {
       steps {
-        bat 'npm test'
+        sh 'npm test'
       }
     }             
     stage('Build') {
       steps {
-        bat 'npm run build'
+        sh 'npm run build'
       }
     }
     stage('Check Docker') {
       steps {
-        bat 'docker --version'  // Ensure Docker is accessible in the Jenkins environment
+        sh 'docker --version'  // Ensure Docker is accessible in the Jenkins environment
       }
     }
     stage('Build Image') {
       steps {
         // Run Docker build using PsExec to avoid password prompt
       // bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
-        bat '"C:/PSTools/PsExec.exe" -h "C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
+        sh 'docker build -t my-node-app:1.0 .'
       }
     }
   }
