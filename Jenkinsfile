@@ -29,7 +29,8 @@ pipeline {
     stage('Build Image') {
       steps {
         // Run Docker build using PsExec to avoid password prompt
-       bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
+      // bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
+        bat '"C:/PSTools/psexec.exe" -h "C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
       }
     }
   }
