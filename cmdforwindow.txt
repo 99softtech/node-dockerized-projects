@@ -41,3 +41,15 @@ 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
 docker>>>>>>>>>>>>>>>>>>
 email: 99softtech@gmail.com
 password: Aw3#se4$dr
+
+
+
+jenkins for mac>>>>>>>>>>>>>>>>>>>
+Install the latest LTS version: brew install jenkins-lts
+Start the Jenkins service: brew services start jenkins-lts
+Restart the Jenkins service: brew services restart jenkins-lts
+Update the Jenkins version: brew upgrade jenkins-lts
+
+
+jenkins login>>>>>>>>>>
+http://localhost:8080/
