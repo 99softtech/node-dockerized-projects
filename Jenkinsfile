@@ -2,11 +2,7 @@ pipeline {
   agent any
   environment {
         PATH = "/usr/local/bin:$PATH"  // Adjust based on where Docker is installed
-        DOCKER_CREDENTIALS_ID = 'Aw3#se4$dr'  // Replace with your Docker credentials ID in Jenkins
-        IMAGE_NAME = '99softtech/my-node-app'  // Replace with your Docker Hub username and image name
-        IMAGE_TAG = 'latest'  // Or dynamically set this with git commit, date, or other variables
- 
-  }
+   }
   stages {    
     stage('checkout') {
       steps {
@@ -52,7 +48,7 @@ pipeline {
       steps {
         script {
           // Login to Docker Hub using Jenkins credentials
-          withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
+          withCredentials([usernamePassword(credentialsId: '99softtech', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
             sh '''
               echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
             '''
