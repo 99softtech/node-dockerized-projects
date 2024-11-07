@@ -9,7 +9,7 @@ pipeline {
     stage('Install dependencies') {
       steps {
        sh '''
-        echo 'Kalpana\\$2023' | sudo -S apt install npm
+        echo 'Kalpana$2023' | sudo -S apt install npm
         '''
       }
     }     
