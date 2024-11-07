@@ -26,12 +26,10 @@ pipeline {
         sh 'docker --version'  // Ensure Docker is accessible in the Jenkins environment
       }
     }
-    stage('Build Image') {
-      steps {
-        // Run Docker build using PsExec to avoid password prompt
-      // bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -t my-node-app:1.0 .'
-        sh 'docker build -t my-node-app:1.0 .'
-      }
-    }
+    // stage('Build Image') {
+    //   steps {
+    //     sh 'docker build -t my-node-app:1.0 .'
+    //   }
+    // }
   }
 }
