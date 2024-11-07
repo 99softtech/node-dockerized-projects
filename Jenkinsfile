@@ -11,12 +11,16 @@ pipeline {
        sh '''
         export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
         brew install npm
+        npm install
         '''
       }
     }     
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh '''
+         export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+         npm test
+         '''
       }
     }             
     stage('Build') {
