@@ -8,7 +8,8 @@ pipeline {
     }        
     stage('Install dependencies') {
       steps {
-        sh "echo '${'Kalpana$2023'}' | sudo -S apt install npm"
+        sh '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+        sh 'brew install npm'
       }
     }     
     stage('Test') {
