@@ -48,7 +48,7 @@ pipeline {
       steps {
         script {
           // Login to Docker Hub using Jenkins credentials
-          withCredentials([usernamePassword(credentialsId: '99softtech', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
+          withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
             sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
             sh 'docker tag my-node-app:1.0 99softtech/my-node-app:1.0'
             sh 'docker push 99softtech/my-node-app:1.0'
